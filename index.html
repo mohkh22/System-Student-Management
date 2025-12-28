@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Student ManagemenS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <div class="container">
+        <button id="btnAdd">+</button>
+
+        <div class="card">
+     <div class="header">
+    <h1>System Student Management</h1>  
+     </div>
+        <div class="search">
+            <input type="text" placeholder="Search" id="search">
+             <button id="btnsearch">Search</button>
+        </div>
+        <div class="option">
+            <button id="success" onclick="selectSucceess(event)" >Select Successfull</button>
+            <button  id="fail" onclick="selectFail(event)" >Select Faild</button>
+            <!-- <button id="Sgrade" onclick="SortByGrade(event)">Sort By Grade</button> -->
+            <!-- <button id="Sname">Sort By Name</button> -->
+        </div>
+        </div>
+        <div class="test"></div>
+        <div class="student-list">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Grade</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+      
+        <div id="cover">
+
+        </div>
+
+       <div class="popup" id="popup">
+        <div class="form">
+            <label>Name</label>
+            <input type="text" placeholder="Name" required id="name">
+            <label>Grade</label>
+            <input type="text" placeholder="Grade" required id="grade">
+            <button id="btnSave">Save</button>
+        </div>
+          <span id="close">X</span>
+       </div>
+
+
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>

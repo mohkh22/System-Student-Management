@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #001000, #000000);
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+}
+
+/* .header {
+  position: sticky;
+  top: 0;
+} */
+.header h1 {
+  margin-bottom: 10px;
+  font-size: 50px;
+  text-align: center;
+}
+.header h1::after {
+  content: "";
+  width: 300px;
+  height: 5px;
+  background: linear-gradient(45deg, #30c530ff, #736f6fff, #30c530ff);
+  display: block;
+  margin: 5px auto 30px;
+  border-radius: 5px;
+}
+
+.card {
+  width: 100%;
+  margin: auto;
+  height: 250px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: none;
+  margin-top: -100px;
+  background: #0f2410ff;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index:50; 
+}
+.search {
+  width: 80%;
+  height: 40px;
+  margin: auto;
+  margin-bottom: 20px;
+  display: flex;
+  overflow: hidden;
+}
+.search input {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-size: 25px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+.search button {
+  width: 60px;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  margin-left: -60px;
+  background: #30c530ff;
+  opacity: 0.8;
+  color: #fff;
+  cursor: pointer;
+}
+
+.search button:hover {
+  opacity: 1;
+}
+
+.option {
+  width: 70%;
+  display: flex;
+  margin: auto;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+.option button {
+  padding: 8px 10px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  opacity: 0.6;
+  cursor: pointer;
+  background: #68b587ff;
+  color: #fff;
+}
+
+.option button:hover {
+  opacity: 1;
+}
+
+
+button.active {
+  background: #68b587ff;
+  opacity: 1;
+}
+
+.student-list {
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  /* overflow-y: auto; */
+}
+.student-list table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+.student-list table th {
+  border: 1px solid #fff;
+  padding: 10px;
+  text-align: center;
+}
+.student-list table td {
+  border: 1px solid #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+#btnAdd{
+    position:fixed; 
+    bottom:20px; 
+    right:20px; 
+    width:50px; 
+    height:50px; 
+    border-radius:50px; 
+    font-size:20px; 
+    background-color:#30c530ff; 
+    color:#fff; 
+    border:none; 
+    outline:none; 
+    cursor:pointer;
+}
+
+.popup input , .popup label{
+    display:block; 
+}
+
+.popup label{
+    margin-left:2px; 
+    font-size:20px; 
+}
+.popup input{
+    width:100%; 
+    padding:10px; 
+    margin-bottom:10px; 
+    border-radius:10px; 
+    border:none; 
+    outline:none; 
+}
+.popup{
+    width:400px; 
+    height:230px; 
+    border-radius:10px; 
+    padding:15px; 
+    border:none ;
+    padding:10px; 
+    position:fixed; 
+    top:50%; 
+    right:50%; 
+    transform:translate(50%,-50%); 
+    background-color:#0f2410ff; 
+    color:#fff;
+    display:flex; 
+    flex-direction:column; 
+    z-index:100; 
+    display:none; 
+}
+
+.popup .form{
+    margin-top:15px;
+}
+.popup button  {
+    width:80%; 
+    display:block; 
+    padding:10px; 
+    margin:15px auto; 
+    font-size:20px; 
+    border-radius:10px; 
+    border:none; 
+    outline:none; 
+    background-color:#30c530ff; 
+    color:#fff; 
+    cursor:pointer;
+}
+.popup span {
+    position:absolute; 
+    top:-10px; 
+    right:-8px; 
+    background:red; 
+    padding:5px;
+    text-align:center;
+    border-radius:50%; 
+    border:none; 
+    outline:none;
+    cursor:pointer;
+}
+#cover{
+    position:absolute; 
+    top:0; 
+    left:0; 
+    width:100%; 
+    height:100%; 
+    background-color:rgba(0,0,0,0.5); 
+    display:none;
+    z-index:90; 
+}
+.edit , .delete{
+    padding:5px 8px; 
+    background-color:#30c530ff; 
+    color:#fff; 
+    border:none; 
+    font-weight:bold;
+    opacity:0.8;
+    border-radius:8px; 
+    outline:none; 
+    cursor:pointer;
+    margin-left:5px;
+}
+.delete{
+    background:red;
+}
+.delete:hover ,.edit:hover{
+    opacity:1;
+}
+
+tr.success{
+    background:green ; 
+}
+tr.fail{
+    background:red ;
+}
